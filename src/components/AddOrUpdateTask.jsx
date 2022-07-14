@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { OneTask } from "./OneTask";
 
 export const AddOrUpdateTask = ({ addTask = () => {} }) => {
@@ -6,8 +6,10 @@ export const AddOrUpdateTask = ({ addTask = () => {} }) => {
     const [newTask, setNewTask] = useState('');
 
     const handleClick = () => {
-        addTask(newTask);
-        setNewTask('');
+        if (newTask !== '') {
+            addTask(newTask);
+            setNewTask('');
+        }
     }
     
     const handleChange = (e) => {
@@ -16,8 +18,10 @@ export const AddOrUpdateTask = ({ addTask = () => {} }) => {
     
     const handleKeyUp = (e) => {
         if (e.keyCode === 13) {
-            addTask(newTask);
-            setNewTask('');
+            if (newTask !== '') {
+                addTask(newTask);
+                setNewTask('');
+            }
         }
     }
 
