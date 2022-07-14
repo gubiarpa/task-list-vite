@@ -13,21 +13,21 @@ function App() {
     }
 
     return (
-        <>
+        <div className='container'>
             <div>
                 <AddOrUpdateTask addTask={addTask} />
             </div>
-            <table>
+            <table className='table table-hover'>
                 <thead>
                     <tr>
-                        <td>Item</td>
-                        <td>Value</td>
-                        <td>Actions</td>
+                        <th scope='col'>Item</th>
+                        <th scope='col'>Value</th>
+                        <th scope='col'>Actions</th>
                     </tr>
                 </thead>
                 <ListTasks tasks={tasks} />
             </table>
-        </>
+        </div>
     );
 }
 

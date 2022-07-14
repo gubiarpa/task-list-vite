@@ -4,7 +4,8 @@ export const OneTask = ({id, name} = {}) => {
             <td>{id}</td>
             <td>{name}</td>
             <td>
-                <button>Remove</button>
+                <button className="btn btn-outline-primary mx-1">Edit</button>
+                <button className="btn btn-outline-danger mx-1">Remove</button>
             </td>
         </tr>   
     )

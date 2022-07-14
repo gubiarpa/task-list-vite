@@ -22,9 +22,9 @@ export const AddOrUpdateTask = ({ addTask = () => {} }) => {
     }
 
     return (
-        <>
-            <input type="text" name="New Task" id="txtNewTask" value={newTask} onChange={handleChange} onKeyUp={handleKeyUp} />
-            <button onClick={handleClick}>Add</button>
-        </>
+        <div className="input-group">
+            <input className="form-control" type="text" name="New Task" id="txtNewTask" value={newTask} onChange={handleChange} onKeyUp={handleKeyUp} />
+            <button className="btn btn-outline-primary" onClick={handleClick}>Add</button>
+        </div>
     );
 }
